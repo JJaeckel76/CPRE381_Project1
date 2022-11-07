@@ -1,0 +1,74 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity tb_ALU is 
+generic(N : integer := 32);
+end tb_ALU;
+
+architecture behavior of tb_ALU is
+
+component ALU
+        port(i_A	: in std_logic_vector(N-1 downto 0);
+	     i_B	: in std_logic_vector(N-1 downto 0);
+	     i_Op	: in std_logic_vector(3 downto 0);
+	     o_Rslt	: out std_logic_vector(N-1 downto 0);
+	     o_Ovf	: out std_logic;
+	     o_Carry	: out std_logic;
+	     o_Z	: out std_logic);
+end component;
+
+signal s_A, s_B, s_Rslt : std_logic_vector(N-1 downto 0);
+signal s_Op : std_logic_vector(3 downto 0);
+signal s_Ovf, s_Carry, s_Z : std_logic;
+
+begin
+
+TB: ALU
+	port map(i_A => s_A,
+		i_B => s_B,
+		i_Op => s_Op,
+		o_Ovf => s_Ovf,
+		o_Carry => s_Carry,
+		o_Z => s_Z,
+		o_Rslt => s_Rslt);
+process
+begin
+--addition
+s_A <= "00000000000000000000000000000001";
+s_B <= "00000000000000000000000000000001";
+s_Op <= "0001";
+wait for 100 ns;
+--subtraction
+s_A <= "00000000000000000000000000000001";
+s_B <= "00000000000000000000000000000001";
+s_Op <= "1001";
+wait for 100 ns;
+--or
+s_A <= "00000000000000000000000000111111";
+s_B <= "00000000000000000000000000000001";
+s_Op <= "0011";
+wait for 100 ns;
+--slt
+s_A <= "00000000000000000000000000111111";
+s_B <= "00000000000000000000000000000001";
+s_Op <= "1000";
+wait for 100 ns;
+--nor
+s_A <= "00000000000000000000000000111111";
+s_B <= "00000000000011111111100000000001";
+s_Op <= "0101";
+wait for 100 ns;
+--xor
+s_A <= "00000000000000000000000000111111";
+s_B <= "00000000111111111000000000000001";
+s_Op <= "0100";
+wait for 100 ns;
+--and
+s_A <= "00000000000000000000000000111111";
+s_B <= "00000000000000000000000000111111";
+s_Op <= "0010";
+wait for 100 ns;
+
+wait;
+end process;
+end behavior;

@@ -6,7 +6,7 @@ use IEEE.std_logic_1164.all;
 
 entity addSub is
 generic(N : integer := 32);
-port(i_a_A, i_b_B : in std_logic_vector(N-1 downto 0);
+port(i_A, i_B : in std_logic_vector(N-1 downto 0);
      nAdd_Sub : in std_logic;
      o_Cry : out std_logic;
      o_Ov : out std_logic;

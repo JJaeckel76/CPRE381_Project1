@@ -1,10 +1,26 @@
-/home/sburrell/Project1/CPRE381_Project1/xor32.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/sburrell/Project1/CPRE381_Project1/xor32.vhd
+/home/sburrell/Project1/CPRE381_Project1/mux2t1_N.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/sburrell/Project1/CPRE381_Project1/mux2t1_N.vhd
+QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2t1_N
+-- Compiling architecture structural of mux2t1_N
+
+} {} {}} /home/sburrell/Project1/CPRE381_Project1/xor32.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/sburrell/Project1/CPRE381_Project1/xor32.vhd
 QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Compiling entity xor32
 -- Compiling architecture structure of xor32
+
+} {} {}} /home/sburrell/Project1/CPRE381_Project1/tb_ALU.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/sburrell/Project1/CPRE381_Project1/tb_ALU.vhd
+QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity tb_ALU
+-- Compiling architecture behavior of tb_ALU
 
 } {} {}} /home/sburrell/Project1/CPRE381_Project1/mux8t1.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/sburrell/Project1/CPRE381_Project1/mux8t1.vhd
 QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
@@ -29,23 +45,6 @@ QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
 -- Loading package std_logic_1164
 -- Compiling entity xorg2
 -- Compiling architecture dataflow of xorg2
-
-} {} {}} /home/sburrell/Project1/CPRE381_Project1/ALU.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/sburrell/Project1/CPRE381_Project1/ALU.vhd
-QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ALU
--- Compiling architecture structure of ALU
-
-} {} {}} /home/sburrell/Project1/CPRE381_Project1/addSub.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/sburrell/Project1/CPRE381_Project1/addSub.vhd
-QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity addSub
--- Compiling architecture behavior of addSub
 
 } {} {}} /home/sburrell/Project1/CPRE381_Project1/nor32.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/sburrell/Project1/CPRE381_Project1/nor32.vhd
 QuestaSim-64 vcom 2022.2 Compiler 2022.04 Apr 25 2022

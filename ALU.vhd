@@ -18,8 +18,8 @@ end ALU;
 architecture structure of ALU is
 	component addSub is
 	generic(N : integer := 32);
-	port(i_A : in std_logic_vector(N-1 downto 0);
-	     i_B : in std_logic_vector(N-1 downto 0);
+	port(i_a_A : in std_logic_vector(N-1 downto 0);
+	     i_b_B : in std_logic_vector(N-1 downto 0);
 	    nAdd_sub : in std_logic;
 	     o_Ov : out std_logic;
 	     o_Cry : out std_logic;
@@ -61,7 +61,6 @@ component nor32
 end component;
 
 component BarrellShift
-	generic(N : integer := 32);
 	port(i_I : in std_logic_vector(31 downto 0);
         i_Sel : in std_logic;
         i_Dir : in std_logic; 

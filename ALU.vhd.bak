@@ -61,7 +61,6 @@ component nor32
 end component;
 
 component BarrellShift
-	generic(N : integer := 32);
 	port(i_I : in std_logic_vector(31 downto 0);
         i_Sel : in std_logic;
         i_Dir : in std_logic; 
@@ -82,7 +81,7 @@ signal sPAD : std_logic_vector(N-1 downto 0) := x"00000000";
 
 begin
 	add_Sub: addSub port map(i_A, i_B, i_OP(3), sOv, o_Carry, sAddSub);
-	xor_2 : xor2 port map(sOv, sAddSub(31), sPAD(0));
+	xor_2 : xorg2 port map(sOv, sAddSub(31), sPAD(0));
 	and_32 : and32 port map(i_A, i_B, sAnd);
 	or_32 : or32 port map(i_A, i_B, sOR);
 	xor_32 : xor32 port map(i_A, i_B, sXOr);
