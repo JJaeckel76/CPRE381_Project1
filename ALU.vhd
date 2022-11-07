@@ -16,15 +16,15 @@ entiy ALU is
 end ALU;
 
 architecture structure of ALU is
-	component add_sub is
+	component addSub is
 	generic(N : integer := 32);
 	port(i_A : in std_logic_vector(N-1 downto 0);
 	     i_B : in std_logic_vector(N-1 downto 0);
-	     add_sub : in std_logic;
-	     Ov : out std_logic;
-	     Z : out std_logic;
-	     Cry : out std_logic;
-	     o_Rslt : out std_logic_vector(N-1 downto 0));
+	    nAdd_sub : in std_logic;
+	     o_Ov : out std_logic;
+	     o_Z : out std_logic;
+	     o_Cry : out std_logic;
+	     o_O : out std_logic_vector(N-1 downto 0));
 end component;
 
 component xorg2

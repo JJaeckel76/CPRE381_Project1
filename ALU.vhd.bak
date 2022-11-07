@@ -47,6 +47,13 @@ component xor32
 	     o_F : out std_logic(N-1 downto 0));
 end component; 
 
+component or32
+	generic(N : integer := 32);
+	port(i_A : in std_logic_vector(N-1 downto 0);
+	     i_B : in std_logic_vector(N-1 downto 0);
+	     o_F : out std_logic_vector(N-1 downto 0));
+end component;
+
 component nor32
 	generic(N : integer := 32);
 	port(i_A : in std_logic_vector(N-1 downto 0);
