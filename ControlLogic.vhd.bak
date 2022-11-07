@@ -1,0 +1,293 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity controlLogic is
+port(	instruct31_26	: in std_logic_vector(5 downto 0);
+	instruct5_0	: in std_logic_vector(5 downto 0);
+	ALUCont		: out  std_logic_vector(3 downto 0);
+	ALUSrc		: out std_logic;
+	MemtoReg	: out std_logic;
+	MemWrite	: out std_logic;
+	MemRead		: out std_logic;
+	RegWrite	: out std_logic;
+	RegDst		: out std_logic;
+	Branch		: out std_logic;
+	Jump		: out std_logic;
+	Bne		: out std_logic;
+	Link		: out std_logic;
+	JumpR		: out std_logic);
+end controlLogic;
+
+architecture dataflow of controlLogic is
+begin
+process
+begin
+	ALUCont <= "0000";
+	ALUSrc <= '0';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '0';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+
+if (instruct31_26 = "000000") then
+when "000000" => 
+ALUSrc <= '0';
+MemtoReg <= '1';
+MemWrite <= '0';
+MemRead <= '0';
+RegWrite <= '1';
+RegDst <= '1';
+Branch <= '0';
+Jump <= '0';
+JumpR <= '1';
+Link <= '0';
+Bne <= '0';
+	case instruct5_0 is 
+	when "100000" => --add
+	ALUCont <= "0001";
+	when "100001" =>--addu
+	ALUCont <= "0001";
+	when "100100" =>--and
+	ALUCont <= "0010";
+	--when "not" =>
+	--ALUCont <= "001000";
+	when "100111" =>
+	ALUCont <= "0101";
+	when "100110" =>--xor
+	ALUCont <= "0100";
+	when "100101" =>--or
+	ALUCont <= "0011";
+	when "101010" =>--slt
+	ALUCont <= "1000";
+	when "000000" =>--sll
+	ALUCont <= "0110";
+	when "000010" =>--srl
+	ALUCont <= "0111";
+	when "000011" =>--sra
+	ALUCont <= "1111";
+	when "100010" =>--sub
+	ALUCont <= "1001";
+	when "100011" =>--subu
+	ALUCont <= "1001";
+	when "001000" =>--jr
+	ALUCont <= "0001";
+	ALUSrc <= '0';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '0';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '1';
+	Link <= '0';
+	Bne <= '0';
+	when others =>
+	ALUCont <= "0000";
+	ALUSrc <= '0';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '0';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+	end case;
+else
+case instruct31_26 is
+when "001000" => --addi
+	ALUCont <= "0001";
+	ALUSrc <= '1';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '1';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+when "001001" => --addiu
+	ALUCont <= "0001";
+	ALUSrc <= '1';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '1';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+when "001100" => --andi
+	ALUCont <= "0010";
+	ALUSrc <= '1';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '1';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+when "001101" => --ori
+	ALUCont <= "0011";
+	ALUSrc <= '1';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '1';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+when "001111" => --lui
+	ALUCont <= "0110";
+	ALUSrc <= '1';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '1';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+when "100011" => --lw
+	ALUCont <= "0001";
+	ALUSrc <= '1';
+	MemtoReg <= '1';
+	MemWrite <= '0';
+	MemRead <= '1';	
+	RegWrite <= '1';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+when "101011" => --sw
+	ALUCont <= "0001";
+	ALUSrc <= '1';
+	MemtoReg <= '0';
+	MemWrite <= '1';
+	MemRead <= '0';
+	RegWrite <= '0';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+when "000100" => --beq
+	ALUCont <= "1001";
+	ALUSrc <= '0';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '0';
+	RegDst <= '0';
+	Branch <= '1';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+when "000101" => --bne
+	ALUCont <= "1001";
+	ALUSrc <= '0';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '0';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '1';
+when "001010" => --slti
+	ALUCont <= "1000";
+	ALUSrc <= '1';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '1';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+when "001110" => --xori
+	ALUCont <= "0100";
+	ALUSrc <= '1';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '1';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+when "000010" => --jump
+	ALUCont <= "1000";
+	ALUSrc <= '0';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '0';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '1';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+when "000011" => --jal
+	ALUCont <= "1000";
+	ALUSrc <= '0';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '0';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '1';
+	JumpR <= '0';
+	Link <= '1';
+	Bne <= '0';
+when others =>
+	ALUCont <= "0000";
+	ALUSrc <= '0';
+	MemtoReg <= '0';
+	MemWrite <= '0';
+	MemRead <= '0';
+	RegWrite <= '0';
+	RegDst <= '0';
+	Branch <= '0';
+	Jump <= '0';
+	JumpR <= '0';
+	Link <= '0';
+	Bne <= '0';
+end case;
+end if;
+end process;
+end dataflow;
+ 

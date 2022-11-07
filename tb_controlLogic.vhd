@@ -1,0 +1,161 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity tb_controlLogic is
+	generic(gCLK	: time := 50 ns;
+	N : integer := 32);
+end tb_controlLogic;
+
+architecture structure of tb_ControlLogic is
+constant cCLK : time := gCLK * 2;
+component ControlLogic
+port(	instruct31_26	: in std_logic_vector(5 downto 0);
+	instruct5_0	: in std_logic_vector(5 downto 0);
+	ALUCont		: out  std_logic_vector(3 downto 0);
+	ALUSrc		: out std_logic;
+	MemtoReg	: out std_logic;
+	MemWrite	: out std_logic;
+	MemRead		: out std_logic;
+	RegWrite	: out std_logic;
+	RegDst		: out std_logic;
+	Branch		: out std_logic;
+	Jump		: out std_logic;
+	Bne		: out std_logic;
+	Link		: out std_logic;
+	JumpR		: out std_logic);
+end component;
+
+signal s_inst31_26, s_inst5_0: std_logic_vector(5 downto 0);
+signal s_ALUCont: std_logic_vector(3 downto 0);
+signal s_ALUSrc, s_MemtoReg, s_MemWrite, s_MemRead, s_RegWrite, s_RegDst, s_Branch, s_Jump, s_Bne, s_Link, s_JumpR: std_logic;
+
+begin
+
+DUT: ControlLogic
+port map(instruct31_26 => s_inst31_26,
+	instruct5_0 => s_inst5_0,
+	ALUCont => s_ALUCont,
+	ALUSrc => s_ALUSrc,
+	MemtoReg => s_MemtoReg,
+	MemWrite => s_MemWrite,
+	MemRead => s_MemRead,
+	RegWrite => s_RegWrite,
+	RegDst => s_RegDst,
+	Branch => s_Branch,
+	Jump => s_Jump,
+	Bne => s_Bne,
+	Link => s_Link,
+	JumpR => s_JumpR);
+
+P_TB: process
+begin
+
+s_inst31_26 <= "001000";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "001001";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "001100";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "001101";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "001111";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "100011";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "101011";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "000100";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "000101";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "001010";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "001110";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "000010";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "000011";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "000010";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "100000";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "100001";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "100100";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "100111";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "100110";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "100101";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "101010";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "000000";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "000010";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "000011";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "100010";
+wait for 100 ns;
+
+s_inst31_26 <= "000000";
+s_inst5_0 <= "100011";
+wait for 100 ns;
+
+wait;
+end process;
+end structure;
+
