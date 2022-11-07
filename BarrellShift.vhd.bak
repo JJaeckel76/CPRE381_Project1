@@ -8,14 +8,14 @@ entity BarrellShift is
 port(   i_I : in std_logic_vector(31 downto 0);
 	i_Sh : in std_logic_vector(4 downto 0);
 	i_Sel : in std_logic_vector(1 downto 0); 
-	o_O : : out std_logic_vector(31 downto 0));
+	o_Ot : out std_logic_vector(31 downto 0));
 end BarrellShift
 
 
 architecture structure of BarrellShift is
 
 component mux is
-port (  i_S s : in std_logic;
+port (  i_S : in std_logic;
 	i_D0 : in std_logic_vector(31 downto 0);
 	i_D1 : in std_logic_vector(31 downto 0);
 	o_O : out std_logic_vector(31 downto 0));
@@ -48,4 +48,39 @@ begin
 		t_3 <= i_I(31) & i_I(31) & i_I(31) & i_I(31) & mo_2(31 downto 4);
 		t_4 <= i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & mo_3(31 downto 8);
 		t_5 <= i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & i_I(31) & mo_4(31 downto 16);
+	 when others => t_1 <= i_I;
+	end case;
+end process;
+
+GMUX_1: mux
+	port map(i_D0 => i_I,
+		 i_D1 => t_1,
+		 i_S => i_Sh(0),
+		 o_O => mo_1);
+
+GMUX_2: mux
+	port map(i_D0 => mo_1,
+		 i_D1 => t_2,
+		 i_S => i_Sh(1),
+		 o_O => mo_2);
+
+GMUX_3: mux
+	port map(i_D0 => mo_2,
+		 i_D1 => t_3,
+		 i_S => i_Sh(2),
+		 o_O => mo_3);
+
+GMUX_4: mux
+	port map(i_D0 => mo_3,
+		 i_D1 => t_4,
+		 i_S => i_Sh(3),
+		 o_O => mo_4);
+
+GMUX_5: mux
+	port map(i_D0 => mo_4,
+		 i_D1 => t_5,
+		 i_S => i_Sh(4),
+		 o_O => o_Ot);
+
+end structure;
 
