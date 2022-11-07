@@ -15,7 +15,7 @@ port(i_D0 : in std_logic_vector(N-1 downto 0);
      i_I1 : in std_logic;
      i_I2 : in std_logic;
      o_O : out std_logic_vector(N-1 downto 0));
-end mux8t1
+end mux8t1;
 
 architecture structure of mux8t1 is
 
@@ -36,7 +36,7 @@ generic(N : integer := 32);
        i_D1         : in std_logic_vector(N-1 downto 0);
        i_S          : in std_logic;
        o_O          : out std_logic_vector(N-1 downto 0));
-end component
+end component;
 
 signal s_S1, s_S2 : std_logic_vector(N-1 downto 0);
 

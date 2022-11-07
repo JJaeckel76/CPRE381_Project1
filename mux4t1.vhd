@@ -10,7 +10,7 @@ port(i_D0 : in std_logic_vector(N-1 downto 0);
      i_I0 : in std_logic;
      i_I1 : in std_logic;
      o_O : out std_logic_vector(N-1 downto 0));
-end mux4t1
+end mux4t1;
 
 architecture structure of mux4t1 is
 component mux2t1_N

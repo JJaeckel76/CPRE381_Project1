@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11e vcom 2022.2 2022.04, Apr 25 2022
 13
 !s112 1.1
 !i10d 8192
@@ -8,3 +9,497 @@ z2
 !i10f 100
 cModel Technology
 d/home/jjaeckel/Documents/Lab2
+Eaddsub
+Z0 w1667785255
+Z1 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z2 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 15
+Z3 d/home/sburrell/Project1/CPRE381_Project1
+Z4 8/home/sburrell/Project1/CPRE381_Project1/addSub.vhd
+Z5 F/home/sburrell/Project1/CPRE381_Project1/addSub.vhd
+l0
+L7 1
+VfPg38T14zk_M6z_M?eIAl1
+!s100 g4dIE9iRH[D^8W7^O?KoA2
+Z6 OL;C;2022.2;75
+32
+Z7 !s110 1667787539
+!i10b 1
+Z8 !s108 1667787539.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/addSub.vhd|
+Z10 !s107 /home/sburrell/Project1/CPRE381_Project1/addSub.vhd|
+!i113 0
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Abehavior
+R1
+R2
+DEx4 work 6 addsub 0 22 fPg38T14zk_M6z_M?eIAl1
+!i122 15
+l44
+L16 59
+V[_63RL=2ER:PCkiN<;:dI1
+!s100 G7V=G]>;jVan=dB=]Wf0V0
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 0
+R11
+R12
+Ealu
+Z13 w1667788581
+Z14 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+R1
+R2
+!i122 27
+R3
+Z15 8/home/sburrell/Project1/CPRE381_Project1/ALU.vhd
+Z16 F/home/sburrell/Project1/CPRE381_Project1/ALU.vhd
+l0
+L7 1
+V94ib5eVKcjEYzMGTzn]X63
+!s100 P]?L??X?`FjJCdX93H`j73
+R6
+32
+Z17 !s110 1667788586
+!i10b 1
+Z18 !s108 1667788586.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/ALU.vhd|
+!s107 /home/sburrell/Project1/CPRE381_Project1/ALU.vhd|
+!i113 0
+R11
+R12
+Astructure
+R14
+R1
+R2
+DEx4 work 3 alu 0 22 94ib5eVKcjEYzMGTzn]X63
+!i122 27
+l83
+L18 76
+V5aZimiiKliZSR?oiWzMm20
+!s100 ]J_]zo[mz?_6BnI9oAKYT2
+R6
+32
+R17
+!i10b 1
+R18
+R19
+Z20 !s107 /home/sburrell/Project1/CPRE381_Project1/ALU.vhd|
+!i113 0
+R11
+R12
+Eand32
+Z21 w1667787525
+R1
+R2
+!i122 14
+R3
+Z22 8/home/sburrell/Project1/CPRE381_Project1/and32.vhd
+Z23 F/home/sburrell/Project1/CPRE381_Project1/and32.vhd
+l0
+L4 1
+VO3L1i[g[?Ih3UmJ6b7e;j0
+!s100 @m0[NcU[MORR=zgd?JNSm3
+R6
+32
+Z24 !s110 1667787531
+!i10b 1
+Z25 !s108 1667787531.000000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/and32.vhd|
+Z27 !s107 /home/sburrell/Project1/CPRE381_Project1/and32.vhd|
+!i113 0
+R11
+R12
+Astructure
+R1
+R2
+DEx4 work 5 and32 0 22 O3L1i[g[?Ih3UmJ6b7e;j0
+!i122 14
+l19
+L11 14
+VK6`2dQM0a`CIgWFSLU]i[0
+!s100 14X]B:RhkPI;c@D34IH<n1
+R6
+32
+R24
+!i10b 1
+R25
+R26
+R27
+!i113 0
+R11
+R12
+Ebarrellshift
+Z28 w1667787996
+R1
+R2
+!i122 20
+R3
+Z29 8/home/sburrell/Project1/CPRE381_Project1/BarrellShift.vhd
+Z30 F/home/sburrell/Project1/CPRE381_Project1/BarrellShift.vhd
+l0
+L7 1
+VXFQ:C2]ZjSdib2D?:4ITk2
+!s100 0G;IOOOf4DX@aC7c5Y?R<0
+R6
+32
+Z31 !s110 1667787999
+!i10b 1
+Z32 !s108 1667787999.000000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/BarrellShift.vhd|
+Z34 !s107 /home/sburrell/Project1/CPRE381_Project1/BarrellShift.vhd|
+!i113 0
+R11
+R12
+Astructure
+R1
+R2
+DEx4 work 12 barrellshift 0 22 XFQ:C2]ZjSdib2D?:4ITk2
+!i122 20
+l38
+L16 186
+V]1a4mF>c7ECQldc9>A_4Q2
+!s100 8MJboh>S5UFI1`^CZc6Y@2
+R6
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 0
+R11
+R12
+Emux2t1_n
+Z35 w1667785695
+R1
+R2
+!i122 0
+R3
+Z36 8/home/sburrell/Project1/CPRE381_Project1/mux2t1_N.vhd
+Z37 F/home/sburrell/Project1/CPRE381_Project1/mux2t1_N.vhd
+l0
+L21 1
+V_HShhGWB3i4L:Tb:ZN4f=3
+!s100 f@JW6YnDL;zoDFK?hK;^L3
+R6
+32
+Z38 !s110 1667787023
+!i10b 1
+Z39 !s108 1667787023.000000
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/mux2t1_N.vhd|
+Z41 !s107 /home/sburrell/Project1/CPRE381_Project1/mux2t1_N.vhd|
+!i113 0
+R11
+R12
+Astructural
+R1
+R2
+DEx4 work 8 mux2t1_n 0 22 _HShhGWB3i4L:Tb:ZN4f=3
+!i122 0
+l39
+L30 21
+VMXk]Jf=OB_Ko1UJB6ezfS1
+!s100 `>^]M24jDEZ=7JFVDOOTo3
+R6
+32
+R38
+!i10b 1
+R39
+R40
+R41
+!i113 0
+R11
+R12
+Emux4t1
+Z42 w1667787062
+R1
+R2
+!i122 1
+R3
+Z43 8/home/sburrell/Project1/CPRE381_Project1/mux4t1.vhd
+Z44 F/home/sburrell/Project1/CPRE381_Project1/mux4t1.vhd
+l0
+L4 1
+VEQQEUc0Yd=AXz:?`IJIO@1
+!s100 9o@9c<0]HWA_4HEc3VWG_2
+R6
+32
+Z45 !s110 1667787067
+!i10b 1
+Z46 !s108 1667787067.000000
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/mux4t1.vhd|
+Z48 !s107 /home/sburrell/Project1/CPRE381_Project1/mux4t1.vhd|
+!i113 0
+R11
+R12
+Astructure
+R1
+R2
+DEx4 work 6 mux4t1 0 22 EQQEUc0Yd=AXz:?`IJIO@1
+!i122 1
+l26
+L15 16
+VK?doY6W@DmO1cAT7b59FB0
+!s100 ga@J0ZKB?>7XELilzmY1B2
+R6
+32
+R45
+!i10b 1
+R46
+R47
+R48
+!i113 0
+R11
+R12
+Emux8t1
+Z49 w1667787242
+R1
+R2
+!i122 4
+R3
+Z50 8/home/sburrell/Project1/CPRE381_Project1/mux8t1.vhd
+Z51 F/home/sburrell/Project1/CPRE381_Project1/mux8t1.vhd
+l0
+L4 1
+Vd_JgMgb^G62XQ]2h5[<4`2
+!s100 5mbkAAck`zjHRE12ncPP02
+R6
+32
+Z52 !s110 1667787250
+!i10b 1
+Z53 !s108 1667787250.000000
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/mux8t1.vhd|
+Z55 !s107 /home/sburrell/Project1/CPRE381_Project1/mux8t1.vhd|
+!i113 0
+R11
+R12
+Astructure
+R1
+R2
+DEx4 work 6 mux8t1 0 22 d_JgMgb^G62XQ]2h5[<4`2
+!i122 4
+l43
+L20 28
+VjAzbkhl7GbIO=0UFLOWQi1
+!s100 N`k6``c0@OhXjPg_W;zSe2
+R6
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 0
+R11
+R12
+Enor32
+Z56 w1667787441
+R1
+R2
+!i122 11
+R3
+Z57 8/home/sburrell/Project1/CPRE381_Project1/nor32.vhd
+Z58 F/home/sburrell/Project1/CPRE381_Project1/nor32.vhd
+l0
+L4 1
+VdXeBESa@E508nOkWFOVCF1
+!s100 WoJMmUJPS__1?8XnmBH;M0
+R6
+32
+Z59 !s110 1667787444
+!i10b 1
+Z60 !s108 1667787444.000000
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/nor32.vhd|
+Z62 !s107 /home/sburrell/Project1/CPRE381_Project1/nor32.vhd|
+!i113 0
+R11
+R12
+Astructure
+R1
+R2
+DEx4 work 5 nor32 0 22 dXeBESa@E508nOkWFOVCF1
+!i122 11
+l20
+L11 15
+V:;A`C7Ab__0^NZYl2i;PR0
+!s100 EVzLg=[i?fi8j?kSUgC]F1
+R6
+32
+R59
+!i10b 1
+R60
+R61
+R62
+!i113 0
+R11
+R12
+Eor32
+Z63 w1667770650
+R1
+R2
+!i122 7
+R3
+Z64 8/home/sburrell/Project1/CPRE381_Project1/or32.vhd
+Z65 F/home/sburrell/Project1/CPRE381_Project1/or32.vhd
+l0
+L4 1
+V6P>DLm@n_A_alP5Cl:;gL3
+!s100 ^5T7P3NFJ8D`2__dU<XFI1
+R6
+32
+Z66 !s110 1667787413
+!i10b 1
+Z67 !s108 1667787413.000000
+Z68 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/or32.vhd|
+Z69 !s107 /home/sburrell/Project1/CPRE381_Project1/or32.vhd|
+!i113 0
+R11
+R12
+Astructure
+R1
+R2
+DEx4 work 4 or32 0 22 6P>DLm@n_A_alP5Cl:;gL3
+!i122 7
+l18
+Z70 L11 12
+VY@d@b9^KN:ib3;LS@jmK83
+!s100 _4Ef4bUO:N_KC<C;8`9V_1
+R6
+32
+R66
+!i10b 1
+R67
+R68
+R69
+!i113 0
+R11
+R12
+Eorg2
+R35
+R1
+R2
+!i122 8
+R3
+Z71 8/home/sburrell/Project1/CPRE381_Project1/org2.vhd
+Z72 F/home/sburrell/Project1/CPRE381_Project1/org2.vhd
+l0
+Z73 L23 1
+VWT:AVMfUQTLN[=P`_YWal0
+!s100 hJAZ>EB8bm_e<^5IFaP9e1
+R6
+32
+Z74 !s110 1667787419
+!i10b 1
+Z75 !s108 1667787419.000000
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/org2.vhd|
+Z77 !s107 /home/sburrell/Project1/CPRE381_Project1/org2.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 4 org2 0 22 WT:AVMfUQTLN[=P`_YWal0
+!i122 8
+l32
+Z78 L31 6
+Vm8NYYlXmEk<mhPGPk8;A<1
+!s100 nma>Pa=mMW`KzzjeW=1[d1
+R6
+32
+R74
+!i10b 1
+R75
+R76
+R77
+!i113 0
+R11
+R12
+Exor32
+Z79 w1667770791
+R1
+R2
+!i122 9
+R3
+Z80 8/home/sburrell/Project1/CPRE381_Project1/xor32.vhd
+Z81 F/home/sburrell/Project1/CPRE381_Project1/xor32.vhd
+l0
+L4 1
+VWEDmn0:5Jk1KLj3Sm]ozo3
+!s100 e_`DMmOKG;eEkk3C=GfdI1
+R6
+32
+Z82 !s110 1667787423
+!i10b 1
+Z83 !s108 1667787423.000000
+Z84 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/xor32.vhd|
+Z85 !s107 /home/sburrell/Project1/CPRE381_Project1/xor32.vhd|
+!i113 0
+R11
+R12
+Astructure
+R1
+R2
+DEx4 work 5 xor32 0 22 WEDmn0:5Jk1KLj3Sm]ozo3
+!i122 9
+l18
+R70
+VMUbihj_>jAFXBTzJRW?NP2
+!s100 S4inDNL[NABH?X_G9XPYJ3
+R6
+32
+R82
+!i10b 1
+R83
+R84
+R85
+!i113 0
+R11
+R12
+Exorg2
+R35
+R1
+R2
+!i122 10
+R3
+Z86 8/home/sburrell/Project1/CPRE381_Project1/xorg2.vhd
+Z87 F/home/sburrell/Project1/CPRE381_Project1/xorg2.vhd
+l0
+R73
+VcS2l3fan@dfjC^Q`;X2Gm0
+!s100 zGkHVGJ]HQ5RboN2N>KzN1
+R6
+32
+Z88 !s110 1667787427
+!i10b 1
+Z89 !s108 1667787427.000000
+Z90 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/xorg2.vhd|
+Z91 !s107 /home/sburrell/Project1/CPRE381_Project1/xorg2.vhd|
+!i113 0
+R11
+R12
+Adataflow
+R1
+R2
+DEx4 work 5 xorg2 0 22 cS2l3fan@dfjC^Q`;X2Gm0
+!i122 10
+l32
+R78
+VaV`j?WB7Nc[PRUmJXALDR1
+!s100 2<f]d3XziROLh_[:_6mNg2
+R6
+32
+R88
+!i10b 1
+R89
+R90
+R91
+!i113 0
+R11
+R12

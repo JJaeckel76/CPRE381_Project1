@@ -15,9 +15,9 @@ end mux4t1
 architecture structure of mux4t1 is
 component mux2t1_N
 generic(N : integer := 32);
-port(i_S          : in std_logic;
-     i_D0         : in std_logic_vector(N-1 downto 0);
+port(i_D0         : in std_logic_vector(N-1 downto 0);
      i_D1         : in std_logic_vector(N-1 downto 0);
+     i_S          : in std_logic;
      o_O          : out std_logic_vector(N-1 downto 0));
 end component;
 

@@ -8,14 +8,14 @@ entity nor32 is
 	     o_F : out std_logic_vector(N-1 downto 0));
 end nor32;
 
-architecture structure of or32 is
+architecture structure of nor32 is
 component org2
 port(i_A : in std_logic;
 	i_B : in std_logic;
 	o_F : out std_logic);
 end component;
 
-singal orO : std_logic_vector(N-1 downto 0);
+signal orO : std_logic_vector(N-1 downto 0);
 
 begin
 F1: for i in 0 to N-1 generate

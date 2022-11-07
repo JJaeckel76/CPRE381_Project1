@@ -10,7 +10,7 @@ port(   i_I : in std_logic_vector(31 downto 0);
         i_Dir : in std_logic; 
 	i_Shft : in std_logic_vector(4 downto 0);
 	o_Ot : out std_logic_vector(31 downto 0));
-end BarrellShift
+end BarrellShift;
 
 
 architecture structure of BarrellShift is
@@ -20,14 +20,14 @@ port (  i_S : in std_logic;
 	i_D0 : in std_logic_vector(31 downto 0);
 	i_D1 : in std_logic_vector(31 downto 0);
 	o_O : out std_logic_vector(31 downto 0));
-end comonent;
+end component;
 
 component mux2t1 is
 port(i_D0 : in std_logic;
      i_D1 : in std_logic;
      i_S : in std_logic;
-     i_O : in std_logic);
-end component
+     o_O : in std_logic);
+end component;
 
 signal shft : std_logic;
 signal s_D, ls_i, ls_o : std_logic_vector(31 downto 0);
@@ -37,38 +37,38 @@ signal sh0_o, sh1_o, sh2_o, sh3_o, sh4_o : std_logic_vector(31 downto 0);
 
 begin
 
-	sl_i(0) <= i_I(31);
-	sl_i(1) <= i_I(30);
-	sl_i(2) <= i_I(29);
-	sl_i(3) <= i_I(28);
-	sl_i(4) <= i_I(27);
-	sl_i(5) <= i_I(26);
-	sl_i(6) <= i_I(25);
-	sl_i(7) <= i_I(24);
-	sl_i(8) <= i_I(23);
-	sl_i(9) <= i_I(22);
-	sl_i(10) <= i_I(21);
-	sl_i(11) <= i_I(20);
-	sl_i(12) <= i_I(19);
-	sl_i(13) <= i_I(18);
-	sl_i(14) <= i_I(17);
-	sl_i(15) <= i_I(16);
-	sl_i(16) <= i_I(15);
-	sl_i(17) <= i_I(14);
-	sl_i(18) <= i_I(13);
-	sl_i(19) <= i_I(12);
-	sl_i(20) <= i_I(11);
-	sl_i(21) <= i_I(10);
-	sl_i(22) <= i_I(9);
-	sl_i(23) <= i_I(8);
-	sl_i(24) <= i_I(7);
-	sl_i(25) <= i_I(6);
-	sl_i(26) <= i_I(5);
-	sl_i(27) <= i_I(4);
-	sl_i(28) <= i_I(3);
-	sl_i(29) <= i_I(2);
-	sl_i(30) <= i_I(1);
-	sl_i(31) <= i_I(0);
+	ls_i(0) <= i_I(31);
+	ls_i(1) <= i_I(30);
+	ls_i(2) <= i_I(29);
+	ls_i(3) <= i_I(28);
+	ls_i(4) <= i_I(27);
+	ls_i(5) <= i_I(26);
+	ls_i(6) <= i_I(25);
+	ls_i(7) <= i_I(24);
+	ls_i(8) <= i_I(23);
+	ls_i(9) <= i_I(22);
+	ls_i(10) <= i_I(21);
+	ls_i(11) <= i_I(20);
+	ls_i(12) <= i_I(19);
+	ls_i(13) <= i_I(18);
+	ls_i(14) <= i_I(17);
+	ls_i(15) <= i_I(16);
+	ls_i(16) <= i_I(15);
+	ls_i(17) <= i_I(14);
+	ls_i(18) <= i_I(13);
+	ls_i(19) <= i_I(12);
+	ls_i(20) <= i_I(11);
+	ls_i(21) <= i_I(10);
+	ls_i(22) <= i_I(9);
+	ls_i(23) <= i_I(8);
+	ls_i(24) <= i_I(7);
+	ls_i(25) <= i_I(6);
+	ls_i(26) <= i_I(5);
+	ls_i(27) <= i_I(4);
+	ls_i(28) <= i_I(3);
+	ls_i(29) <= i_I(2);
+	ls_i(30) <= i_I(1);
+	ls_i(31) <= i_I(0);
 
 
 MUX1: mux2t1_N
@@ -150,7 +150,7 @@ sh4_i(18) <= shft;
 sh4_i(17) <= shft;
 sh4_i(16) <= shft;
 
-MUX6: mux2t1_N
+MUX7: mux2t1_N
 	generic map (N => 32)
 	port map(i_S => i_Shft(4),
 		 i_D0 => sh3_o,
@@ -190,7 +190,7 @@ ls_o(29) <= sh4_o(2);
 ls_o(30) <= sh4_o(1);
 ls_o(31) <= sh4_o(0);
 
-MUX7: mux2t1_N
+MUX8: mux2t1_N
 	generic map (N => 32)
 	port map(i_S => i_Dir,
 		 i_D0 => sh4_o,

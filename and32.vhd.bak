@@ -10,7 +10,7 @@ end and32;
 
 architecture structure of and32 is
 
-compontent and2
+component andg2
   port(i_A : in std_logic;
 	i_B : in std_logic;
 	o_F : out std_logic);

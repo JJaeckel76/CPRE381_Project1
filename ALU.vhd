@@ -4,7 +4,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-entiy ALU is 
+entity ALU is 
 	generic(N : integer :=32);
 	port(i_A	: in std_logic_vector(N-1 downto 0);
 	     i_B	: in std_logic_vector(N-1 downto 0);
@@ -22,7 +22,6 @@ architecture structure of ALU is
 	     i_B : in std_logic_vector(N-1 downto 0);
 	    nAdd_sub : in std_logic;
 	     o_Ov : out std_logic;
-	     o_Z : out std_logic;
 	     o_Cry : out std_logic;
 	     o_O : out std_logic_vector(N-1 downto 0));
 end component;
@@ -37,14 +36,14 @@ component and32
 	generic(N : integer := 32);
 	port(i_A : in std_logic_vector(N-1 downto 0);
 	     i_B : in std_logic_vector(N-1 downto 0);
-	     o_F : out std_logic(N-1 downto 0));
+	     o_F : out std_logic_vector(N-1 downto 0));
 end component;
 
 component xor32
 	generic(N : integer := 32);
 	port(i_A : in std_logic_vector(N-1 downto 0);
 	     i_B : in std_logic_vector(N-1 downto 0);
-	     o_F : out std_logic(N-1 downto 0));
+	     o_F : out std_logic_vector(N-1 downto 0));
 end component; 
 
 component or32
@@ -58,7 +57,7 @@ component nor32
 	generic(N : integer := 32);
 	port(i_A : in std_logic_vector(N-1 downto 0);
 	     i_B : in std_logic_vector(N-1 downto 0);
-	     o_F : out std_logic(N-1 downto 0));
+	     o_F : out std_logic_vector(N-1 downto 0));
 end component;
 
 component BarrellShift
@@ -82,8 +81,8 @@ signal sOv, sXor2 : std_logic;
 signal sPAD : std_logic_vector(N-1 downto 0) := x"00000000";
 
 begin
-	addSub: add_sub ort map(i_A, i_B, i_OP(3), sOv, Cry, sAddSub);
-	xor_2 : xor2 port map(sOv, sAddSub(31), sPAD(0));
+	add_Sub: addSub port map(i_A, i_B, i_OP(3), sOv, o_Carry, sAddSub);
+	xor_2 : xorg2 port map(sOv, sAddSub(31), sPAD(0));
 	and_32 : and32 port map(i_A, i_B, sAnd);
 	or_32 : or32 port map(i_A, i_B, sOR);
 	xor_32 : xor32 port map(i_A, i_B, sXOr);
