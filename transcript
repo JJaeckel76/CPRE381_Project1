@@ -62,3 +62,4 @@ run 1200
 quit -sim
 # End time: 13:45:41 on Dec 02,2022, Elapsed time: 0:01:27
 # Errors: 0, Warnings: 2
+# Compile of shift2.vhd was successful.

@@ -24,6 +24,7 @@ Z4 o-quiet -auto_acc_if_foreign -work work +acc
 Z5 tCvgOpt 0
 n@_opt
 Z6 OL;O;2022.2;75
+R1
 T_opt1
 !s110 1667798984
 V2bbP?=nmiCY]GS=VjJz>83
@@ -501,25 +502,68 @@ R94
 !i113 0
 R18
 R19
+Eshift2
+Z96 w1670016008
+R21
+R8
+R9
+!i122 47
+R43
+Z97 8/home/jjaeckel/Documents/Project1/CPRE381_Project1/shift2.vhd
+Z98 F/home/jjaeckel/Documents/Project1/CPRE381_Project1/shift2.vhd
+l0
+L4 1
+Vg;6V:EOb93<nzYgnHcSCl3
+!s100 kB6G4hU[R;H3dOQ1E2h;R1
+R13
+32
+Z99 !s110 1670016011
+!i10b 1
+Z100 !s108 1670016011.000000
+Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/jjaeckel/Documents/Project1/CPRE381_Project1/shift2.vhd|
+!s107 /home/jjaeckel/Documents/Project1/CPRE381_Project1/shift2.vhd|
+!i113 0
+R18
+R19
+Adataflow
+R21
+R8
+R9
+DEx4 work 6 shift2 0 22 g;6V:EOb93<nzYgnHcSCl3
+!i122 47
+l10
+L9 4
+VEE0^E9=_mKj62i^PRNgIT0
+!s100 e=eOS?SBQj<P;[9bWOOCi2
+R13
+32
+R99
+!i10b 1
+R100
+R101
+Z102 !s107 /home/jjaeckel/Documents/Project1/CPRE381_Project1/shift2.vhd|
+!i113 0
+R18
+R19
 Etb_alu
-Z96 w1667798136
+Z103 w1667798136
 R8
 R9
 !i122 44
 R10
-Z97 8/home/sburrell/Project1/CPRE381_Project1/tb_ALU.vhd
-Z98 F/home/sburrell/Project1/CPRE381_Project1/tb_ALU.vhd
+Z104 8/home/sburrell/Project1/CPRE381_Project1/tb_ALU.vhd
+Z105 F/home/sburrell/Project1/CPRE381_Project1/tb_ALU.vhd
 l0
 L4 1
 VOJChlB=bE:U5:l[5S5jb50
 !s100 5X[kc7^U:6O[Dn0hFI]Tz2
 R13
 32
-Z99 !s110 1667798976
+Z106 !s110 1667798976
 !i10b 1
-Z100 !s108 1667798976.000000
-Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/tb_ALU.vhd|
-Z102 !s107 /home/sburrell/Project1/CPRE381_Project1/tb_ALU.vhd|
+Z107 !s108 1667798976.000000
+Z108 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/tb_ALU.vhd|
+Z109 !s107 /home/sburrell/Project1/CPRE381_Project1/tb_ALU.vhd|
 !i113 0
 R18
 R19
@@ -534,43 +578,43 @@ V8oPMczP>0co3Ii52Xaz_N1
 !s100 IlkBXcLIB6gHSXL=1VeCN1
 R13
 32
-R99
+R106
 !i10b 1
-R100
-R101
-R102
+R107
+R108
+R109
 !i113 0
 R18
 R19
 Etb_bshift
-Z103 w1667795131
-Z104 DPx3 std 3 env 0 22 QPZJVBPkV?55nUWhDzFik0
+Z110 w1667795131
+Z111 DPx3 std 3 env 0 22 QPZJVBPkV?55nUWhDzFik0
 R21
-Z105 DPx4 ieee 16 std_logic_textio 0 22 C8j>g0lzF^EAA]5<S6PY32
+Z112 DPx4 ieee 16 std_logic_textio 0 22 C8j>g0lzF^EAA]5<S6PY32
 R8
 R9
 !i122 31
 R10
-Z106 8/home/sburrell/Project1/CPRE381_Project1/tb_bShift.vhd
-Z107 F/home/sburrell/Project1/CPRE381_Project1/tb_bShift.vhd
+Z113 8/home/sburrell/Project1/CPRE381_Project1/tb_bShift.vhd
+Z114 F/home/sburrell/Project1/CPRE381_Project1/tb_bShift.vhd
 l0
 L9 1
 Vg@Phbe_M_cdYzez=4eg^81
 !s100 ee?6FzZoRMTJc6NfHm9Lk1
 R13
 32
-Z108 !s110 1667795134
+Z115 !s110 1667795134
 !i10b 1
-Z109 !s108 1667795134.000000
-Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/tb_bShift.vhd|
-Z111 !s107 /home/sburrell/Project1/CPRE381_Project1/tb_bShift.vhd|
+Z116 !s108 1667795134.000000
+Z117 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/tb_bShift.vhd|
+Z118 !s107 /home/sburrell/Project1/CPRE381_Project1/tb_bShift.vhd|
 !i113 0
 R18
 R19
 Abehavior
-R104
+R111
 R21
-R105
+R112
 R8
 R9
 DEx4 work 9 tb_bshift 0 22 g@Phbe_M_cdYzez=4eg^81
@@ -581,23 +625,23 @@ VA6<ilZoeI602ZMREWH^023
 !s100 XnQ<I:M1zF]jJDG?Ei;[_1
 R13
 32
-R108
+R115
 !i10b 1
-R109
-R110
-R111
+R116
+R117
+R118
 !i113 0
 R18
 R19
 Etb_controllogic
-Z112 w1667792081
+Z119 w1667792081
 R21
 R8
 R9
 !i122 46
 R43
-Z113 8/home/jjaeckel/Documents/Project1/CPRE381_Project1/tb_controlLogic.vhd
-Z114 F/home/jjaeckel/Documents/Project1/CPRE381_Project1/tb_controlLogic.vhd
+Z120 8/home/jjaeckel/Documents/Project1/CPRE381_Project1/tb_controlLogic.vhd
+Z121 F/home/jjaeckel/Documents/Project1/CPRE381_Project1/tb_controlLogic.vhd
 l0
 L5 1
 V1YM5FOjM?gLGGTbj=P9Yf0
@@ -607,8 +651,8 @@ R13
 R46
 !i10b 1
 R47
-Z115 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|/home/jjaeckel/Documents/Project1/CPRE381_Project1/tb_controlLogic.vhd|
-Z116 !s107 /home/jjaeckel/Documents/Project1/CPRE381_Project1/tb_controlLogic.vhd|
+Z122 !s90 -reportprogress|300|-work|work|-2008|-explicit|-vopt|-stats=none|/home/jjaeckel/Documents/Project1/CPRE381_Project1/tb_controlLogic.vhd|
+Z123 !s107 /home/jjaeckel/Documents/Project1/CPRE381_Project1/tb_controlLogic.vhd|
 !i113 0
 R50
 R19
@@ -627,30 +671,30 @@ R13
 R46
 !i10b 1
 R47
-R115
-R116
+R122
+R123
 !i113 0
 R50
 R19
 Exor32
-Z117 w1667770791
+Z124 w1667770791
 R8
 R9
 !i122 9
 R10
-Z118 8/home/sburrell/Project1/CPRE381_Project1/xor32.vhd
-Z119 F/home/sburrell/Project1/CPRE381_Project1/xor32.vhd
+Z125 8/home/sburrell/Project1/CPRE381_Project1/xor32.vhd
+Z126 F/home/sburrell/Project1/CPRE381_Project1/xor32.vhd
 l0
 L4 1
 VWEDmn0:5Jk1KLj3Sm]ozo3
 !s100 e_`DMmOKG;eEkk3C=GfdI1
 R13
 32
-Z120 !s110 1667787423
+Z127 !s110 1667787423
 !i10b 1
-Z121 !s108 1667787423.000000
-Z122 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/xor32.vhd|
-Z123 !s107 /home/sburrell/Project1/CPRE381_Project1/xor32.vhd|
+Z128 !s108 1667787423.000000
+Z129 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/xor32.vhd|
+Z130 !s107 /home/sburrell/Project1/CPRE381_Project1/xor32.vhd|
 !i113 0
 R18
 R19
@@ -665,11 +709,11 @@ VMUbihj_>jAFXBTzJRW?NP2
 !s100 S4inDNL[NABH?X_G9XPYJ3
 R13
 32
-R120
+R127
 !i10b 1
-R121
-R122
-R123
+R128
+R129
+R130
 !i113 0
 R18
 R19
@@ -679,19 +723,19 @@ R8
 R9
 !i122 10
 R10
-Z124 8/home/sburrell/Project1/CPRE381_Project1/xorg2.vhd
-Z125 F/home/sburrell/Project1/CPRE381_Project1/xorg2.vhd
+Z131 8/home/sburrell/Project1/CPRE381_Project1/xorg2.vhd
+Z132 F/home/sburrell/Project1/CPRE381_Project1/xorg2.vhd
 l0
 R90
 VcS2l3fan@dfjC^Q`;X2Gm0
 !s100 zGkHVGJ]HQ5RboN2N>KzN1
 R13
 32
-Z126 !s110 1667787427
+Z133 !s110 1667787427
 !i10b 1
-Z127 !s108 1667787427.000000
-Z128 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/xorg2.vhd|
-Z129 !s107 /home/sburrell/Project1/CPRE381_Project1/xorg2.vhd|
+Z134 !s108 1667787427.000000
+Z135 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|-stats=none|/home/sburrell/Project1/CPRE381_Project1/xorg2.vhd|
+Z136 !s107 /home/sburrell/Project1/CPRE381_Project1/xorg2.vhd|
 !i113 0
 R18
 R19
@@ -706,11 +750,11 @@ VaV`j?WB7Nc[PRUmJXALDR1
 !s100 2<f]d3XziROLh_[:_6mNg2
 R13
 32
-R126
+R133
 !i10b 1
-R127
-R128
-R129
+R134
+R135
+R136
 !i113 0
 R18
 R19
