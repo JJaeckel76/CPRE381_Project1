@@ -20,7 +20,11 @@ end controlLogic;
 
 architecture dataflow of controlLogic is
 begin
+<<<<<<< HEAD
+op : process(instruct31_26, instruct5_0)
+=======
 process
+>>>>>>> dcae0b1890462ac2da4e6b65490b0b94f48b50dc
 begin
 	ALUCont <= "0000";
 	ALUSrc <= '0';
@@ -35,8 +39,11 @@ begin
 	Link <= '0';
 	Bne <= '0';
 
+<<<<<<< HEAD
+if (instruct31_26 <= "000000") then
+=======
 if (instruct31_26 = "000000") then
-when "000000" => 
+>>>>>>> dcae0b1890462ac2da4e6b65490b0b94f48b50dc
 ALUSrc <= '0';
 MemtoReg <= '1';
 MemWrite <= '0';

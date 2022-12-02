@@ -12,5 +12,53 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-cd /home/sburrell/Project1/CPRE381_Project1
 # Loading project Project1
+# Compile of ControlLogic.vhd was successful.
+# Compile of tb_controlLogic.vhd was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.tb_controllogic
+# vsim work.tb_controllogic 
+# Start time: 13:43:15 on Dec 02,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_controllogic(structure)#1
+quit -sim
+# End time: 13:43:46 on Dec 02,2022, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 3
+vsim work.tb_controllogic -voptargs=+acc
+# vsim work.tb_controllogic -voptargs="+acc" 
+# Start time: 13:44:14 on Dec 02,2022
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_controllogic(structure)#1
+# Loading work.controllogic(dataflow)#1
+add wave -position insertpoint  \
+sim:/tb_controllogic/gCLK \
+sim:/tb_controllogic/N \
+sim:/tb_controllogic/s_inst31_26 \
+sim:/tb_controllogic/s_inst5_0 \
+sim:/tb_controllogic/s_ALUCont \
+sim:/tb_controllogic/s_ALUSrc \
+sim:/tb_controllogic/s_MemtoReg \
+sim:/tb_controllogic/s_MemWrite \
+sim:/tb_controllogic/s_MemRead \
+sim:/tb_controllogic/s_RegWrite \
+sim:/tb_controllogic/s_RegDst \
+sim:/tb_controllogic/s_Branch \
+sim:/tb_controllogic/s_Jump \
+sim:/tb_controllogic/s_Bne \
+sim:/tb_controllogic/s_Link \
+sim:/tb_controllogic/s_JumpR \
+sim:/tb_controllogic/cCLK
+run 1200
+quit -sim
+# End time: 13:45:41 on Dec 02,2022, Elapsed time: 0:01:27
+# Errors: 0, Warnings: 2
